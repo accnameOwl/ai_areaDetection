@@ -6,9 +6,10 @@ detectArea
 	New(mob/_source)
 		source=_source
 
-	Entered(mob/player/a)
-		//proc monster's AI, by calling foundTarget()
-		source.foundTarget(a)
+	Crossed(atom/a)
+		if(istype(a, /mob/player))
+			//proc monster's AI, by calling foundTarget()
+			source.foundTarget(a)
 
 	proc/SetBounds(bound_width, bound_height)
 		//set boundings.
