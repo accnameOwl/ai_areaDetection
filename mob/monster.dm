@@ -16,7 +16,7 @@ mob/monster
 
 			next_attack = 0
 
-			detectArea/detectArea = New(src)
+			detectArea/detectArea = new(src)
 
 		
 		proc
@@ -113,8 +113,10 @@ mob/monster
 		New()
 			. = ..()
 			home_loc = src.loc
-			if(!detectArea) detectionArea = New(src)
-			detectionArea.loc = locate(src)
+
+		Login()
+			if(!detectArea) detectionArea = new(src)
+			detectionArea.loc = loc
 			//bounds are in pixels, as to which aggro_dist is aggro distance in number of tiles.
 			//We do math and convert amounts of tiles into pixels and multiply by 2, since aggro_dist is one direction
 			//but we need in both directions each axis.

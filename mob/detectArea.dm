@@ -1,14 +1,16 @@
 detectArea 
-	parent_type = /area
+	parent_type = /obj
 
 	var/mob/source
 
 	New(mob/_source)
 		source=_source
 
-	Entered(mob/a)
-		if(a.isPlayer())
-			source.foundTarget(a)
+	Entered(mob/player/a)
+		//proc monster's AI, by calling foundTarget()
+		source.foundTarget(a)
 
-	proc/SetLocation(location)
-		src.loc = locate(location)
+	proc/SetBounds(bound_width, bound_height)
+		//set boundings.
+		src.bound_width = bound_width
+		src.bound_height = bound_height
