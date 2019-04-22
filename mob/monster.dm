@@ -1,5 +1,3 @@
-#define MAX_AGGRO_RANGE 12
-
 //Initial AI triggers created by Ter
 //AI detection happens by /detectArea in detectArea.dm
 
