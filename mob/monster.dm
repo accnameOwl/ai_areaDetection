@@ -1,8 +1,7 @@
 #define MAX_AGGRO_RANGE 12
 
-//Originally created by Ter
-//monster ai. 
-//AI detection happens in /mob/player/Moved() - File: _player.dm
+//Initial AI triggers created by Ter
+//AI detection happens by /detectArea in detectArea.dm
 
 mob/monster
 	ai
@@ -123,5 +122,5 @@ mob/monster
 			/*
 			aggro_dist <---------- (mob) ----------> aggro_dist
 			*/
-			
+
 			detectionArea.SetBounds( (aggro_dist * world.icon_size)*2, (aggro_dist * world.icon_size)*2)
