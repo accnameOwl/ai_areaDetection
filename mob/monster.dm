@@ -121,9 +121,7 @@ mob/monster
 			//but we need in both directions each axis.
 
 			/*
-			 ________
-			|   |   |
-			|---+---|
-			|___|___|
+			aggro_dist <---------- (mob) ----------> aggro_dist
 			*/
+			
 			detectionArea.SetBounds( (aggro_dist * world.icon_size)*2, (aggro_dist * world.icon_size)*2)
